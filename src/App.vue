@@ -1,11 +1,21 @@
-<script setup>
+<script lang="ts">
+import AppHeader from '@/components/AppHeader.vue'
+
+export default {
+  components: { AppHeader },
+}
 </script>
 
 <template>
-  <h1>Hello, Vue.js</h1>
+  <div>
+    <AppHeader />
+    <div class="container mt-3">
+      <RouterView />
+    </div>
+  </div>
 </template>
 
-<style scoped>
+<style>
 .page {
   max-width: 400px;
   margin: auto;
